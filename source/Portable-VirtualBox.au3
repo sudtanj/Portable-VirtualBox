@@ -783,7 +783,7 @@ EndIf
       RunWait (@SystemDir&"\regsvr32.exe /S /U "& $arch &"\VBoxC.dll", @ScriptDir, @SW_HIDE)
 
       If $DRV = 1 Then
-        RunWait ("sc stop VBoxDRV", @ScriptDir, @SW_HIDE)
+       ; RunWait ("sc stop VBoxDRV", @ScriptDir, @SW_HIDE)
       EndIf
 
       If $USB = 1 Then
@@ -845,7 +845,7 @@ EndIf
       EndIf
 
       If $DRV = 1 Then
-        RunWait ("sc delete VBoxDRV", @ScriptDir, @SW_HIDE)
+      ;  RunWait ("sc delete VBoxDRV", @ScriptDir, @SW_HIDE)
       EndIf
 
       If $USB = 1 Then
